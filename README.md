@@ -1,1 +1,1 @@
-[aaa]('./detail.png')
+![detail](files/detail.png)
