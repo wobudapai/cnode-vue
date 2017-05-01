@@ -1,1 +1,1 @@
-![detail](https://github.com/zycfj/cnode-vue/blob/master/files/detail.PNG)
+![detail](http://asset.smallcfj.club/cnode/files/detail.png)
