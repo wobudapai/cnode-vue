@@ -1,0 +1,85 @@
+.list, .item {
+  list-style-type: none;
+}
+.item {
+  width: 6.4rem;
+  height: 1.6rem;
+  background-color: white;
+  position: relative;
+  &:not(:last-child) {
+    &:after {
+      content:"";
+      position: absolute;
+      bottom:0;
+      left: 0.4rem;
+      right:0;
+      border-bottom:1px solid #c8c7cc;
+      -webkit-transform:scaleY(.5);
+      -webkit-transform-origin:0 0;
+      z-index: 1;
+    }
+  }
+  &:active {
+    background-color: #f3f3f3;
+  }
+}
+.avatar {
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  float: left;
+}
+.box-content {
+  float: left;
+  height: 1rem;
+  margin: 0.3rem 0.2rem 0.3rem 0;
+  background-color: red;
+  position: relative;
+}
+.box-content .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.32rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 4.4rem;
+}
+.box-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.26rem;
+  color: #777;
+  width: 4.4rem;
+}
+.box-info .box-time {
+  float: right;
+}
+.icon-top {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-image: url('./image/top.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon-essence {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-image: url('./image/essence.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.type {
+  margin-right: 0.2rem;
+}

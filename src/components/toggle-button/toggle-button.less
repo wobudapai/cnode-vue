@@ -1,0 +1,32 @@
+@import "../../assets/style/common";
+
+.toggle-btn {
+  position: relative;
+  width: 1.2rem;
+  height: 0.6rem;
+  background-color: white;
+  margin: 0.3rem auto;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  .toggle-diot {
+    position: absolute;
+    width: 0.56rem;
+    height: 0.56rem;
+    left: 0.02rem;
+    top: 0.02rem;
+    border-radius: 0.28rem;
+    background-color: white;
+    transition: transform .3s;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px #aaa;
+  }
+  &.checked {
+    background-color: @themeColor;
+    border-color: @themeColor;
+    .toggle-diot {
+      -webkit-transform: translate3d(0.59rem, 0, 0);
+      border-color: white;
+    }
+  }
+}

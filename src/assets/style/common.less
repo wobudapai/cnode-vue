@@ -1,0 +1,107 @@
+@globalFontSize: 0.3rem;
+@globalBackColor: #F9F9F9;
+@themeColor: #1FBAD6;
+
+html, body {
+  font-size: @globalFontSize;
+  background-color: @globalBackColor;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * 去掉点击时的灰色背景
+ */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+ * 隐藏文本框阴影
+ */
+input, textarea{
+  -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#app, body, html {
+  height: 100%;
+}
+
+input, button {
+  outline: none;
+}
+
+.btn {
+  background-color:  @themeColor;
+  border: none;
+  color: white;
+  border-radius: 0.1rem;
+  font-size: 0.3rem;
+  padding: 0.25rem 0;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+/* bottom line with height 1px */
+&.bd-bottom {
+  position: relative;
+  &:after {
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    border-bottom:1px solid #c8c7cc;
+    -webkit-transform:scaleY(.5);
+    -webkit-transform-origin:0 0;
+    z-index: 1;
+  }
+}
+
+/* top line with height 1px */
+&.bd-top {
+  position: relative;
+  &:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    border-top:1px solid #c8c7cc;
+    -webkit-transform:scaleY(.5);
+    -webkit-transform-origin:0 0;
+    z-index: 1;
+  }
+}
+
+.btn-bottom {
+  background-color:  @themeColor;
+  border: none;
+  color: white;
+  border-radius: 0.1rem;
+  font-size: 0.3rem;
+  padding: 0.25rem 0;
+
+  position: fixed;
+  bottom: 0.2rem;
+  left: 0.2rem;
+  width: 6rem;
+}
+
+.rotate-loading {
+  animation: anim-rotate 1s linear infinite;
+}
+@keyframes anim-rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}

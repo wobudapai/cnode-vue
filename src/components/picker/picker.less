@@ -1,0 +1,78 @@
+@import "../../assets/style/common";
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 10000;
+}
+
+.picker {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 10001;
+  backface-visibility: hidden;
+  transform: translate(0, 0);
+  transition: transform .5s;
+}
+
+.picker-hd {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #fbf9fe;
+  position: relative;
+  text-align: center;
+  .bd-bottom;
+  .bd-top;
+}
+
+.picker-action {
+    display: block;
+    flex: 1;
+    color: @themeColor;
+    &:first-child {
+        text-align: left;
+    }
+    &:last-child {
+        text-align: right;
+    }
+}
+.picker-bd {
+  display: flex;
+  display: -webkit-flex;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.picker-group {
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.picker-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transform: translateY(0);
+}
+.slide-enter,
+.slide-leave-active {
+  transform: translateY(100%);
+}
